@@ -1,5 +1,7 @@
 # 1주차
 
+## 목차
+
 > * **8월 2일**
 >  > * Basic computer class for newbies
 >  > * 파이썬 개요
