@@ -53,3 +53,6 @@ Ai 관련 활동 및 공부 정리
 > > * Text 사용하기
 > > * Color 사용하기 
 > > * Facet 사용하기
+
+### [4주차](https://github.com/j961224/Ai-tech/tree/main/4%EC%A3%BC%EC%B0%A8)
+
