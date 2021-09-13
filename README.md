@@ -55,3 +55,8 @@ Ai 관련 활동 및 공부 정리
 > > * Facet 사용하기
 
 ### [4주차](https://github.com/j961224/Ai-tech/tree/main/4%EC%A3%BC%EC%B0%A8)
+
+### [7주차](https://github.com/j961224/Ai-tech/tree/main/7%EC%A3%BC%EC%B0%A8)
+
+> * transformer
+> > * 실습7. multi head attention
