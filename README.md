@@ -60,3 +60,4 @@ Ai 관련 활동 및 공부 정리
 
 > * transformer
 > > * 실습7. multi head attention
+> > * 실습8. Masked Multi-head Attention
