@@ -61,3 +61,9 @@ Ai 관련 활동 및 공부 정리
 > * transformer
 > > * 실습7. multi head attention
 > > * 실습8. Masked Multi-head Attention
+> * bert, gpt-1
+> > * 실습9. transformers(BERT)
+> > * 실습10. transformers(GPT-2)
+> * gpt-2, GPT-3, ALBERT, ELECTRA
+> > * 선택과제1. huggingFace FineTuning
+> > * 선택과제3. Byte Pair Encoding
