@@ -56,6 +56,12 @@ Ai 관련 활동 및 공부 정리
 
 ### [4주차](https://github.com/j961224/Ai-tech/tree/main/4%EC%A3%BC%EC%B0%A8)
 
+---
+## Level2
+
+### [6주차](https://github.com/j961224/Ai-tech/tree/main/6%EC%A3%BC%EC%B0%A8)
+
+
 ### [7주차](https://github.com/j961224/Ai-tech/tree/main/7%EC%A3%BC%EC%B0%A8)
 
 > * transformer
@@ -67,3 +73,11 @@ Ai 관련 활동 및 공부 정리
 > * gpt-2, GPT-3, ALBERT, ELECTRA
 > > * 선택과제1. huggingFace FineTuning
 > > * 선택과제3. Byte Pair Encoding
+> * 7주차 회고
+
+### [8주차](https://github.com/j961224/Ai-tech/tree/main/8%EC%A3%BC%EC%B0%A8)
+
+> * 특강
+> > * (특강) 이활석 - 서비스 향 AI 모델 개발하기
+> > * (특강) 김상훈 - 캐글 그랜드마스터의 노하우 대방출
+> > * (특강) 구종만 - AI + ML과 Quant Trading
