@@ -85,3 +85,10 @@ Ai 관련 활동 및 공부 정리
 > > * (특강) 오혜연 - AI Ethics
 > > * (특강) 박은정 - AI 시대의 커리어 빌딩
 > > * (특강) 박성준 - 자연어 처리를 위한 언어 모델의 학습과 평가
+
+---
+
+## level2 - U Stage(KLUE 문장 내 개체간 관계 추출 프로젝트)
+
+### [9주차](https://github.com/j961224/Ai-tech/tree/main/9%EC%A3%BC%EC%B0%A8)
+
