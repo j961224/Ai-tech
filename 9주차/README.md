@@ -21,7 +21,7 @@
 | --seed | random seed 설정 | 2 |
 | --dotenv_path | 사용자 env 파일 경로 설정   | /opt/ml/wandb.env |
 | --wandb_unique_tag | wandb tag 설정 | bert-base-high-lr |
-| --entity_flag | 사용자 env 파일 경로 설정   | |
+| --entity_flag | 사용자 env 파일 경로 설정   | False |
 | --preprocessing_cmb | 데이터 전처리 방식 선택(0: 특수 문자 제거, 1: 특수 문자 치환, 2: date 보정, 3: 한글 띄워주기)| set ex: 0 1 2 |
 | --mecab_flag | mecab을 활용한 형태소 분리 | False |
 | --add_unk_token | unk token vocab에 저장 | False |
