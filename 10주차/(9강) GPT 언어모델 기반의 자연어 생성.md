@@ -183,6 +183,89 @@ sample_outputs = model.generate(
 ~~~
 
 
+## (9강) GPT 기반 자연어 생성 모델 학습 - 1_Few_shot_learning
+
+~~~
+sample_outputs = model.generate(
+        input_ids,
+        do_sample=True, 
+        max_length=512, 
+        top_k=50, 
+        top_p=0.95, 
+        num_return_sequences=1,
+        eos_token_id=tokenizer.token_to_id("</s>"), #eos_token_id 지정하면 문장 생성 시, 이것이 등장하면 early_stopping 가능!
+        no_repeat_ngram_size=2,
+        early_stopping=True
+    )
+~~~
+
+### Zero-shot learning
+
+~~~
+get_gpt_output("<s>철수 : 영희야 안녕!</s><s>영희 : ")
+
+철수 : 영희야 안녕! 영희 : ! - ^^* 아!!
+~~~
+
+### Few-shot learning
+
+~~~
+get_gpt_output("<s>철수 : 영희야 안녕!</s><s>영희 : 어! 철수야! 오랜만이다!</s><s>철수 : 그러게~ 잘 지냈어?</s><s>영희 : ")
+
+철수 : 영희야 안녕! 영희 : 어! 철수야! 오랜만이다! 철수 : 그러게~ 잘 지냈어? 영희 : 훗, 잘 지내지? - 난 오늘도 오늘도 학교 안 가네 - 수진 : 무슨?!- 영 희진아 뭐 해? : 네, 괜찮아요.
+~~~
+
+### 감정 분류(one-shot learning)
+
+~~~
+get_gpt_output("<s>본문 : 아.. 기분 진짜 짜증나네ㅡㅡ</s><s>감정 : 분노</s><s>본문 : 와!! 진짜 너무 좋아!!</s><s>감정 : ")
+
+본문 : 아.. 기분 진짜 짜증나네 감정 : 분노 본문 : 와!! 진짜 너무 좋아!! 감정 : ♥.
+~~~
+
+### Open Domain Question(Few-shot learning)
+
+~~~
+get_gpt_output("<s>질문 : 코로나 바이러스에 걸리면 어떻게 되나요?</s>\
+<s>답 : COVID-19 환자는 일반적으로 감염 후 평균 5 ~ 6 일 (평균 잠복기 5 ~ 6 일, 범위 1 ~ 14 일)에 경미한 호흡기 증상 및 발열을 포함한 징후와 증상을 나타냅니다. COVID-19 바이러스에 감염된 대부분의 사람들은 경미한 질병을 앓고 회복됩니다.</s>\
+<s>질문 : 코로나 바이러스 질병의 첫 증상은 무엇입니까?</s>\
+<s>답 : 이 바이러스는 경미한 질병에서 폐렴에 이르기까지 다양한 증상을 유발할 수 있습니다. 질병의 증상은 발열, 기침, 인후통 및 두통입니다. 심한 경우 호흡 곤란과 사망이 발생할 수 있습니다.</s>\
+<s>질문 : 딸기 식물의 수명주기는 무엇입니까?</s>\
+<s>답 : 딸기의 생애는 새로운 식물의 설립으로 시작하여 2 ~ 3 년 후 절정에 이르렀다가 절정에 이어 2 ~ 3 년에 노화와 죽음을 향해 진행됩니다. 이상적인 조건에서 딸기 식물은 5-6 년까지 살 수 있습니다.</s>\
+<s>질문 : 파이썬 메서드의 self 매개 변수의 목적은 무엇입니까?</s>\
+<s>답 : self 매개 변수는 클래스의 현재 인스턴스에 대한 참조이며 클래스에 속한 변수에 액세스하는 데 사용됩니다.</s>\
+<s>질문 : 뇌의 어떤 부분이 말을 제어합니까?</s>\
+<s>답 : 언어 우세 반구의 왼쪽 전두엽 (브로카 영역)에있는 뇌의 분리 된 부분에 대한 손상은 자발적 언어 및 운동 언어 제어 사용에 상당한 영향을 미치는 것으로 나타났습니다.</s>\
+<s>질문 : 인공지능의 미래에 대해 어떻게 생각하십니까?</s>\
+<s>답 : ")
+
+[ ~~ 답 : rain_NVS가 현재 개발 중인 urgical music control quant cruisine에 의해 연구된다면 인공지능이 과연 인공지능에게 얼마나 중요한 의미를 가지는 지를 보여줌니다. money에 대한 자신의 생각을 말하기 위해서입니다.]
+~~~
+
+=> 질문, 답 형태로 input을 넣음!
+
+### 번역
+
+~~~
+get_gpt_output("<s>한국어: 그 도로는 강과 평행으로 뻗어 있다.</s>\
+<s>English: The road runs parallel to the river.</s>\
+<s>한국어: 그 평행선들은 분기하는 것처럼 보인다.</s>\
+<s>English: The parallel lines appear to diverge.</s>\
+<s>한국어: 그 도로와 운하는 서로 평행하다.</s>\
+<s>English: The road and the canal are parallel to each other.</s>\
+<s>한국어: 평행한 은하계라는 개념은 이해하기가 힘들다.</s>\
+<s>English: The idea of a parallel universe is hard to grasp.</s>\
+<s>한국어: 이러한 전통은 우리 문화에서는 그에 상응하는 것이 없다.</s>\
+<s>English: This tradition has no parallel in our culture.</s>\
+<s>한국어: 이것은 현대에 들어서는 그 유례를 찾기 힘든 업적이다.</s>\
+<s>English: This is an achievement without parallel in modern times.</s>\
+<s>한국어: 그들의 경험과 우리 경험 사이에서 유사점을 찾는 것이 가능하다.</s>\
+<s>English: It is possible to draw a parallel between their experience and ours.</s>\
+<s>한국어: 그 새 학위 과정과 기존의 수료 과정이 동시에 운영될 수도 있을 것이다.</s>\
+<s>English: The new degree and the existing certificate courses would run in parallel.</s>\
+<s>한국어: 이순신은 조선 중기의 무신이다.</s>\
+<s>Englisth: ")
+~~~
 
 
 
