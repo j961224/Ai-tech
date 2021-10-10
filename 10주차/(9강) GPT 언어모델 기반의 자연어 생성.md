@@ -267,6 +267,47 @@ get_gpt_output("<s>한국어: 그 도로는 강과 평행으로 뻗어 있다.</
 <s>Englisth: ")
 ~~~
 
+## (9강) GPT 기반 자연어 생성 모델 학습 - 2_KoGPT_2_기반의_챗봇 (한국어 언어모델 학습 및 다중 과제 튜닝)
+
+~~~
+tokenizer.enable_padding(pad_id=pad_id, pad_token="<pad>") # padding token 넣기 -> padding 설정
+tokenizer.enable_truncation(max_length=128) # truncation max length 알려주기
+~~~
+
+* 실습 class ChatDataset 중, load_data 함수
+
+~~~
+def load_data(self):
+        raw_data = pd.read_csv(self.file_path)
+        train_data = '<s>'+raw_data['Q']+'</s>'+'<s>'+raw_data['A']+'</s>'
+        #<s>안녕하세요</s><s> -> 네, 안녕하세요</s>
+~~~
+
+-> one-shot, few-shot은 생성 시, 앞부분에 정보를 줌
+
+-> **fine-tuning은 좀 더 생성 패턴 자체를 이렇게 만들도록 함!**
+
+* 학습 중 코드
+
+~~~
+outputs = model(data, labels=data)
+~~~
+
+=> labels이 data 자체이므로, data input을 1칸씩 넣어가면서 다음 token이 뭐가 나오는지 확률 최대가 되도록 학습!
+
+~~~
+sample_outputs = model.generate(
+        input_ids,
+        num_return_sequences=5,
+        do_sample=True, 
+        max_length=128, 
+        top_k=50, 
+        top_p=0.95, 
+        eos_token_id=e_s,
+        early_stopping=True,
+        bad_words_ids=[[unk]] #unk token 등장 시, 다른 것을 선택하도록 명시!
+    )
+~~~
 
 
 
