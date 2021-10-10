@@ -219,6 +219,8 @@ output_sequences = model.generate(input_ids=input_ids, do_sample=True, max_lengt
 
 GPT는 BERT보다 좀 더 복잡하지 않고 단조로운 것 같고 얼른 transformer를 코드로 구현하면 GPT도 raw로 code를 구현하고 싶다는 생각이 든다.
 
+왜냐하면 GPT는 transformer의 decoder부분을 이용한다 했지만, 아예 transformer의 decoder부분과 같은지 궁금하므로 좀 더 정리할 필요가 있다고 생각이 든다!
+
 또한 GPT부터 GPT-3까지 논문을 보고 더욱 꼼꼼히 이해해야겠다!
 
 [GPT논문](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf)
