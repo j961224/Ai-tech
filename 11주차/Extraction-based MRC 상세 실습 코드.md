@@ -65,3 +65,62 @@ def prepare_train_features(examples):
   print(tokenized_examples["start_positions"],tokenized_examples["end_positions"])
   return tokenized_examples
 ```
+
+## 2. prepare_validation_features 함수
+
+
+```python
+def prepare_validation_features(examples):
+    tokenized_examples = tokenizer(
+        examples['question'],
+        examples['context'],
+        truncation="only_second",
+        max_length=max_seq_length,
+        stride=doc_stride,
+        return_overflowing_tokens=True,
+        return_offsets_mapping=True,
+        padding="max_length",
+    )
+
+    sample_mapping = tokenized_examples.pop("overflow_to_sample_mapping")
+
+    tokenized_examples["example_id"] = []
+
+    for i in range(len(tokenized_examples["input_ids"])): 
+        sequence_ids = tokenized_examples.sequence_ids(i) #대부분 sequence_ids length는 384(max_seq_length)
+        context_index = 1
+
+        sample_index = sample_mapping[i]
+        tokenized_examples["example_id"].append(examples["id"][sample_index]) # examples['id'] 삽입
+
+        # context 부분의 offset mapping만 넣기
+        tokenized_examples["offset_mapping"][i] = [
+            (o if sequence_ids[k] == context_index else None)
+            for k, o in enumerate(tokenized_examples["offset_mapping"][i])
+        ]
+
+    return tokenized_examples #dict_keys(['attention_mask', 'example_id', 'input_ids', 'offset_mapping', 'token_type_ids'])
+```
+
+## 3. post_processing_function 함수
+
+```python
+def post_processing_function(examples, features, predictions):
+    # Post-processing: we match the start logits and end logits to answers in the original context.
+    predictions = postprocess_qa_predictions(
+        examples=examples, # The non-preprocessed dataset 
+        features=features, # The processed dataset
+        predictions=predictions, # The predictions of the model: two arrays containing the start logits and the end logits respectively
+        version_2_with_negative=False, #기본 데이터 세트에 답변이 없는 예제가 포함되어 있는지 여부
+        n_best_size=n_best_size, # 답변을 찾을 때 생성할 n-best 예측의 총 수
+        max_answer_length=max_answer_length,
+        null_score_diff_threshold=0.0,
+        output_dir=training_args.output_dir,
+        is_world_process_zero=trainer.is_world_process_zero(), # huggingface의 postprocess_qa_predictions에는 아예 없고 baseline에도 없음
+    )
+    
+    # Format the result to the format the metric expects.
+    formatted_predictions = [{"id": k, "prediction_text": v} for k, v in predictions.items()]
+    references = [{"id": ex["id"], "answers": ex["answers"]} for ex in datasets["validation"]]
+    return EvalPrediction(predictions=formatted_predictions, label_ids=references)
+```
