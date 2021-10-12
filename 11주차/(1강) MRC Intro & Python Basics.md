@@ -158,5 +158,99 @@ dataset = load_dataset('squad_kor_v1', split='train')
 대상, 인물, 시간, 장소, 방법, 원인
 
 
+# 2. 실습 HuggingFace 빠르게 훑기!
 
+## 1. Huggingface Transformer 훑기
+
+### tokenizer
+
+* tokenizer 가져오기
+
+~~~
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+~~~
+
+* tokenizer 사용 시, train data의 언어를 이해할 수 있는 tokenizer인지 확인!!
+* 사용하고자 하는 pretrained model과 동일한 tokenizer인지 확인!
+
+### Config
+
+* 모델과 동일한 config 가져오기
+
+~~~
+model_config = AutoConfig.from_pretrained(model_name)
+~~~
+
+* hidden dim 등은 정해져 있으니 바꾸면 안 된다!
+* special token을 추가 시, vocab size도 추가해서 학습해야한다!
+
+~~~
+model_config = AutoConfig.from_pretrained(model_name)
+model_config.vocab_size = model_config.vocab_size + 2
+~~~
+
+### Pretrain model 불러오기
+
+> * 기본 모델: hidden state가 출력되는 기본 모델
+> * downstream task 모델: 기본 모델 + head가 설정된 모델
+
+* config와 pretrained()로 불러오기
+
+~~~
+model_config = AutoConfig.from_pretrained(model_name)
+model = AutoModelForQuestionAnswering.from_pretrained(
+        model_name, config=model_config
+    )
+~~~
+
+## 2. Huggingface Trainer
+
+* TrainingArguments 설정
+* Trainer 호출
+* 학습 / 추론 진행
+
+
+## 3. Advanced tutorial
+
+### Token 추가하기
+
+* special token 추가하기
+
+~~~
+special_tokens_dict = {'additional_special_tokens': ['[special1]','[special2]','[special3]','[special4]']}
+num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
+~~~
+
+* token 추가하기
+
+~~~
+new_tokens = ['COVID', 'hospitalization']
+num_added_toks = tokenizer.add_tokens(new_tokens)
+~~~
+
+* tokenizer config와 model의 token embedding 사이즈 수정!
+
+~~~
+config.vocab_size = len(tokenizer)
+model.resize_token_embeddings(len(tokenizer))
+~~~
+
+-> 만일, 모델에 dummy vocab을 가지고 있다면, resize할 필요가 없다!
+
+### [CLS] output 추출!
+
+* [CLS] 추출하기
+
+~~~
+inputs = tokenizer("정유석은 MRC를 참가했다 !!", return_tensors="pt")
+outputs = model(**inputs)
+
+cls_output = outputs.pooler_output
+~~~
+
+-> .pooler_output을 이용해 cls_output을 추출할 수 있다.
+
+* [CLS] token은 문장을 대표하는가?
+
+**[CLS]가 sentence를 대표하지 못 하는 경우가 있으므로 input의 representation을 추출하여 pooling layer -> maxpooling or average pooling을 시행하기도 함!**
 
