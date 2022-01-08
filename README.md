@@ -81,10 +81,24 @@ Ai 관련 활동 및 공부 정리
 ---
 ## Level2
 
-### [6주차](https://github.com/j961224/Ai-tech/tree/main/6%EC%A3%BC%EC%B0%A8)
+### [[U] NLP - 6주차](https://github.com/j961224/Ai-tech/tree/main/6%EC%A3%BC%EC%B0%A8)
+
+> * NLP
+> > * Intro to NLP, Bag-of-Words
+> > * Word Embedding
+> > * Recurrent Neural Network and Language Modeling
+> > * LSTM and GRU
+> > * Seq2Seq with attention Encoder-decoder architecture Attention mechanism
+> > * Beam search and BLEU score
+> > * 6주차 회고
+
+> * 시각화
+> > * Polor Coordinate
+> > * Pie Charts
+> > * Interactive Visualization
 
 
-### [7주차](https://github.com/j961224/Ai-tech/tree/main/7%EC%A3%BC%EC%B0%A8)
+### [[U] NLP - 7주차](https://github.com/j961224/Ai-tech/tree/main/7%EC%A3%BC%EC%B0%A8)
 
 > * transformer
 > > * 실습7. multi head attention
@@ -97,7 +111,7 @@ Ai 관련 활동 및 공부 정리
 > > * 선택과제3. Byte Pair Encoding
 > * 7주차 회고
 
-### [8주차](https://github.com/j961224/Ai-tech/tree/main/8%EC%A3%BC%EC%B0%A8)
+### [특강 - 8주차](https://github.com/j961224/Ai-tech/tree/main/8%EC%A3%BC%EC%B0%A8)
 
 > * 특강
 > > * (특강) 이활석 - 서비스 향 AI 모델 개발하기
