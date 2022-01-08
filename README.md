@@ -124,7 +124,7 @@ Ai 관련 활동 및 공부 정리
 
 ---
 
-## level2 - U Stage(KLUE 문장 내 개체간 관계 추출 프로젝트)
+## level2 - P Stage(KLUE 문장 내 개체간 관계 추출 프로젝트)
 
 ### [[P] KLUE - 9주차](https://github.com/j961224/Ai-tech/tree/main/9%EC%A3%BC%EC%B0%A8)
 
@@ -144,6 +144,86 @@ Ai 관련 활동 및 공부 정리
 > > * GPT 언어모델 기반의 자연어 생성
 > > * 최신 자연어처리 연구
 
-> * [대회 코드 링크](https://github.com/j961224/klue-level2-nlp-02)
+> * [대회 코드 링크](https://github.com/boostcampaitech2/klue-level2-nlp-02)
 
-### 19주차 - Serving
+---
+
+## level2 - P Stage(Open Domain Question Answering 프로젝트)
+
+### [[P] MRC - 11주차](https://github.com/j961224/Ai-tech/tree/main/11%EC%A3%BC%EC%B0%A8)
+
+> * 강의 정리
+> > * MRC Intro & Python Basics
+> > * Extraction-based MRC
+> > * Generation-based MRC
+> > * Passage Retrieval - Sparse Embedding
+> > * Passage Retrieval - Dense Embedding
+> > * Scaling up with FAISS
+> > * Linking MRC and Retrieval
+
+### [[P] MRC - 12주차](https://github.com/j961224/Ai-tech/tree/main/12%EC%A3%BC%EC%B0%A8)
+
+> * Reducing Training Bias
+
+### [[P] MRC - 13주차 & 14주차](https://github.com/j961224/Ai-tech/tree/main/13%EC%A3%BC%EC%B0%A8)
+
+> * Closed-book QA with T5
+
+> * [대회 코드 링크](https://github.com/boostcampaitech2/mrc-level2-nlp-02)
+
+---
+
+## level3 - P Stage(데이터 제작 프로젝트)
+
+### [[P] - 15주차 & 16주차](https://github.com/j961224/Ai-tech/tree/main/15%EC%A3%BC%EC%B0%A8)
+
+> * 데이터 제작의 A to Z
+> * 자연어처리 데이터 기초
+> * 자연어처리 데이터 소개 1
+> * 자연어처리 데이터 소개 2
+> * 원시 데이터의 수집과 가공
+> * 데이터 구축 작업 설계
+> * 데이터 구축 가이드라인 작성 기초
+> * 관계 추출 과제의 이해
+> * 관계 추출 관련 논문 읽기
+> * 관계 추출 데이터 구축 실습
+
+> * [프로젝트 코드 링크](https://github.com/boostcampaitech2/data-annotation-nlp-level3-nlp-02)
+
+---
+
+## level3 - P Stage(모델 최적화 대회)
+
+### [[P] - 17주차](https://github.com/j961224/Ai-tech/tree/main/17%EC%A3%BC%EC%B0%A8)
+
+> * 최적화 소개 및 강의 개요
+> * 대회 및 데이터셋 소개
+> * 작은 모델, 좋은 파라미터 찾기: AutoML 이론
+> * 작은 모델, 좋은 파라미터 찾기: AutoML 실습
+> * 작은 모델, 좋은 파라미터 찾기: Data Augmentation & AutoML 결과 분석
+> * A. 모델 경량화 기법 101 - CV
+> * B1. 모델 경량화 기법 101 - NLP Part 1
+> * B2. 모델 경량화 기법 101 - NLP Part 2
+
+### [[P] - 18주차](https://github.com/j961224/Ai-tech/tree/main/18%EC%A3%BC%EC%B0%A8)
+
+> * 찾은 모델 잘게 찢기: Tensor Decomposition 이론
+
+> * [프로젝트 코드 링크](https://github.com/boostcampaitech2/model-optimization-level3-nlp-02)
+
+---
+
+## level3 - P Stage(Product Serving & Final Project)
+
+### [[P] - 19주차](https://github.com/j961224/Ai-tech/tree/main/19%EC%A3%BC%EC%B0%A8)
+
+> * MLOps 개론
+> * Model Serving
+> * 머신러닝 프로젝트 라이프 사이클
+> * 프로토타이핑 - 웹 서비스 형태(Streamlit)
+> * Linux & Shell Command
+> * Cloud
+> * Github Action을 활용한 CI/CD
+
+
+### [최종 프로젝트 링크](https://github.com/boostcampaitech2/final-project-level3-nlp-02)
