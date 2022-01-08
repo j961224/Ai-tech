@@ -4,7 +4,7 @@ Ai 관련 활동 및 공부 정리
 
 ## Level1
 
-### [1주차](https://github.com/j961224/Ai-tech/tree/main/1%EC%A3%BC%EC%B0%A8)
+### [[U] Pyhon & AI Math - 1주차](https://github.com/j961224/Ai-tech/tree/main/1%EC%A3%BC%EC%B0%A8)
 
 >  Python Basics for AI
 >  >  * computer class
@@ -20,7 +20,7 @@ Ai 관련 활동 및 공부 정리
 > > * 딥러닝 및 확률론, 통계학
 > > * CNN과 RNN
 
-### [2주차](https://github.com/j961224/Ai-tech/tree/main/2%EC%A3%BC%EC%B0%A8)
+### [[U] DL Basic - 2주차](https://github.com/j961224/Ai-tech/tree/main/2%EC%A3%BC%EC%B0%A8)
 
 > MLP
 
@@ -32,11 +32,11 @@ Ai 관련 활동 및 공부 정리
 
 > LSTM
 
-> Gnerative Model
+> Generative Model
 
 > 시각화
 
-### [3주차](https://github.com/j961224/Ai-tech/tree/main/3%EC%A3%BC%EC%B0%A8)
+### [[U] PyTorch - 3주차](https://github.com/j961224/Ai-tech/tree/main/3%EC%A3%BC%EC%B0%A8)
 
 > * Pytorch
 > > * Introduction to PyTorch
@@ -54,7 +54,29 @@ Ai 관련 활동 및 공부 정리
 > > * Color 사용하기 
 > > * Facet 사용하기
 
-### [4주차](https://github.com/j961224/Ai-tech/tree/main/4%EC%A3%BC%EC%B0%A8)
+### [[P] 이미지 분류 - 4 & 5주차](https://github.com/j961224/Ai-tech/tree/main/4%EC%A3%BC%EC%B0%A8)
+
+> * 강의 정리
+> > * Competition with AI stages!
+> > * Image Classification & EDA
+> > * Dataset
+> > * Data Generation
+> > * Model
+> > * Model - Pretrained Model
+> > * Training & Inference
+> > * Ensemble
+> > * Experiment Toolkits & Tips
+
+> * 마스크 착용 상태 분류 경진 대회 진전 상태
+> > * 마스크 착용 상태 분류 경진 대회 데이터 EDA
+> > * Train Dataset과 Test Dataset 구축하기
+> > * ResNet50 & EfficientNet b4 시도 및 방향
+> > * EfficientNetb4 + VIT 시도 및 방향
+> > * EfficientNetb4 + VIT + cutmix 시도 및 방향
+> > * EfficientNetb3 + Focal loss 시도 및 방향
+> > * EfficientNetb3 + label smoothing & Multi Sample Dropout 시도 및 방향
+> > * EfficientNetb3 + vit_base_patch16_224 시도 및 방향
+> > * 대회 회고
 
 ---
 ## Level2
