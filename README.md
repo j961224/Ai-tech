@@ -175,7 +175,7 @@ Ai 관련 활동 및 공부 정리
 
 ## level3 - P Stage(데이터 제작 프로젝트)
 
-### [[P] - 15주차 & 16주차](https://github.com/j961224/Ai-tech/tree/main/15%EC%A3%BC%EC%B0%A8)
+### [[P] - 데이터 제작(NLP) 15주차 & 16주차](https://github.com/j961224/Ai-tech/tree/main/15%EC%A3%BC%EC%B0%A8)
 
 > * 데이터 제작의 A to Z
 > * 자연어처리 데이터 기초
@@ -194,7 +194,7 @@ Ai 관련 활동 및 공부 정리
 
 ## level3 - P Stage(모델 최적화 대회)
 
-### [[P] - 17주차](https://github.com/j961224/Ai-tech/tree/main/17%EC%A3%BC%EC%B0%A8)
+### [[P] 모델 최적화 - 17주차](https://github.com/j961224/Ai-tech/tree/main/17%EC%A3%BC%EC%B0%A8)
 
 > * 최적화 소개 및 강의 개요
 > * 대회 및 데이터셋 소개
@@ -205,7 +205,7 @@ Ai 관련 활동 및 공부 정리
 > * B1. 모델 경량화 기법 101 - NLP Part 1
 > * B2. 모델 경량화 기법 101 - NLP Part 2
 
-### [[P] - 18주차](https://github.com/j961224/Ai-tech/tree/main/18%EC%A3%BC%EC%B0%A8)
+### [[P] 모델 최적화 - 18주차](https://github.com/j961224/Ai-tech/tree/main/18%EC%A3%BC%EC%B0%A8)
 
 > * 찾은 모델 잘게 찢기: Tensor Decomposition 이론
 
@@ -215,7 +215,7 @@ Ai 관련 활동 및 공부 정리
 
 ## level3 - P Stage(Product Serving & Final Project)
 
-### [[P] - 19주차](https://github.com/j961224/Ai-tech/tree/main/19%EC%A3%BC%EC%B0%A8)
+### [[P] Product Serving - 19주차](https://github.com/j961224/Ai-tech/tree/main/19%EC%A3%BC%EC%B0%A8)
 
 > * MLOps 개론
 > * Model Serving
@@ -225,5 +225,8 @@ Ai 관련 활동 및 공부 정리
 > * Cloud
 > * Github Action을 활용한 CI/CD
 
+### [[P] Product Serving - 20주차](https://github.com/j961224/Ai-tech/tree/main/20%EC%A3%BC%EC%B0%A8)
+
+> * FastAPI
 
 ### [최종 프로젝트 링크](https://github.com/boostcampaitech2/final-project-level3-nlp-02)
