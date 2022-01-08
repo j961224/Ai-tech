@@ -126,6 +126,24 @@ Ai 관련 활동 및 공부 정리
 
 ## level2 - U Stage(KLUE 문장 내 개체간 관계 추출 프로젝트)
 
-### [9주차](https://github.com/j961224/Ai-tech/tree/main/9%EC%A3%BC%EC%B0%A8)
+### [[P] KLUE - 9주차](https://github.com/j961224/Ai-tech/tree/main/9%EC%A3%BC%EC%B0%A8)
+
+> * 강의 정리
+> > * 인공지능과 자연어 처리
+> > * 자연어의 전처리
+> > * BERT 언어모델 소개
+> > * 한국어 BERT 언어 모델 학습 및 다중 과제 튜닝 - BERT Pre-Training
+> > * BERT 기반 단일 문장 분류 모델 학습
+> > * BERT 기반 두 문장 관계 분류 모델 학습
+> > * BERT 언어모델 기반의 문장 토큰 분류
+
+### [[P] KLUE - 10주차](https://github.com/j961224/Ai-tech/tree/main/10%EC%A3%BC%EC%B0%A8)
+
+> * 강의 정리
+> > * GPT 언어 모델
+> > * GPT 언어모델 기반의 자연어 생성
+> > * 최신 자연어처리 연구
+
+> * [대회 코드 링크](https://github.com/j961224/klue-level2-nlp-02)
 
 ### 19주차 - Serving
