@@ -228,5 +228,8 @@ Ai 관련 활동 및 공부 정리
 ### [[P] Product Serving - 20주차](https://github.com/j961224/Ai-tech/tree/main/20%EC%A3%BC%EC%B0%A8)
 
 > * FastAPI
+> * Docker
+> * Logging
+> * MLflow
 
 ### [최종 프로젝트 링크](https://github.com/boostcampaitech2/final-project-level3-nlp-02)
